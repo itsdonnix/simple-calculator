@@ -1,10 +1,10 @@
 (function () {
-  ("use strict");
+  "use strict";
 
   // States
-  let firstInit = true;
-  let lastOperator = 0;
-  let result = 0;
+  let firstInit = true,
+    lastOperator = 0,
+    result = 0;
 
   // DOM Elements
   const output = document.querySelector("output");
