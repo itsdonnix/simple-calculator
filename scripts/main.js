@@ -7,7 +7,7 @@
     result = 0;
 
   // DOM Elements
-  const output = document.querySelector("output");
+  const output = document.querySelector("#output");
   const buttonsWrapper = document.querySelector(".buttons");
 
   buttonsWrapper.querySelectorAll("button").forEach((button) => {
@@ -28,17 +28,17 @@
   function onNumButtonClicked(event) {
     const text = event.target.innerText;
     if (firstInit) {
-      output.textContent = text;
+      output.value = text;
       firstInit = false;
     } else {
-      output.textContent += text;
+      output.value += text;
     }
   }
 
   /** @param {MouseEvent} event */
   function onOperatorButtonClicked(event) {
-    if (!!output.innerText) {
-      result = +output.innerText;
+    if (!!output.value) {
+      result = +output.value;
     }
     lastOperator = +event.target.dataset.opId;
     clearLcd();
@@ -47,7 +47,7 @@
   /** @param {MouseEvent} event */
   function onButtonEqualClicked(/* event */) {
     if (lastOperator == 0) return;
-    const currentNum = +output.innerText;
+    const currentNum = +output.value;
     if (lastOperator === 1) {
       result = result + currentNum;
     } else if (lastOperator === 2) {
@@ -59,18 +59,18 @@
     }
     clearLcd();
     lastOperator = 0;
-    output.innerText = result;
+    output.value = result;
   }
 
   /** @param {MouseEvent} event */
   function onButtonClearClicked(/* event */) {
-    output.innerText = 0;
+    output.value = 0;
     result = 0;
     lastOperator = 0;
     firstInit = true;
   }
 
   function clearLcd() {
-    if (!firstInit) output.innerText = "";
+    if (!firstInit) output.value = "";
   }
 })();

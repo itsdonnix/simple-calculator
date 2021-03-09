@@ -33,14 +33,12 @@ body {
 }
 
 .calc--lcd {
-  align-items: center;
   border-width: thin;
   border: 1px solid #cecece;
-  display: flex;
   font-size: 2em;
   height: 2em;
-  justify-content: flex-end;
   padding: 10px;
+  text-align: right;
 }
 
 .buttons {
