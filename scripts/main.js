@@ -7,13 +7,10 @@
   let result = 0;
 
   // DOM Elements
-  const buttons = {};
   const output = document.querySelector("output");
   const buttonsWrapper = document.querySelector(".buttons");
 
   buttonsWrapper.querySelectorAll("button").forEach((button) => {
-    buttons[button.id] = button;
-
     // Num buttons
     if (!isNaN(button.innerText)) {
       button.addEventListener("click", onNumButtonClicked);
@@ -46,7 +43,7 @@
   }
 
   /** @param {MouseEvent} event */
-  function onButtonEqualClicked(event) {
+  function onButtonEqualClicked(/* event */) {
     if (lastOperator == 0) return;
     if (lastOperator === 1) {
       result = result + +output.innerText;
@@ -63,7 +60,7 @@
   }
 
   /** @param {MouseEvent} event */
-  function onButtonClearClicked(event) {
+  function onButtonClearClicked(/* event */) {
     output.innerText = 0;
     result = 0;
     lastOperator = 0;
