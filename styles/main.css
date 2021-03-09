@@ -44,7 +44,7 @@ body {
 }
 
 .buttons {
-  margin-top: 20px;
+  margin-top: 10px;
   display: grid;
   width: 100%;
   grid-template-columns: repeat(auto-fit, minmax(calc(100% / 4), 1fr));
