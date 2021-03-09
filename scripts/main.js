@@ -37,7 +37,9 @@
 
   /** @param {MouseEvent} event */
   function onOperatorButtonClicked(event) {
-    result = +output.innerText;
+    if (!!output.innerText) {
+      result = +output.innerText;
+    }
     lastOperator = +event.target.dataset.opId;
     clearLcd();
   }
