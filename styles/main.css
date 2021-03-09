@@ -38,7 +38,7 @@ body {
   border: 1px solid #cecece;
   display: flex;
   font-size: 2em;
-  height: 90px;
+  height: 2em;
   justify-content: flex-end;
   padding: 10px;
 }
