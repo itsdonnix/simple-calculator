@@ -11,8 +11,8 @@
   const buttonsWrapper = document.querySelector(".buttons");
 
   buttonsWrapper.querySelectorAll("button").forEach((button) => {
-    // Num buttons
     if (!isNaN(button.innerText)) {
+      // Num buttons
       button.addEventListener("click", onNumButtonClicked);
     } else if (button.id === "button-clear") {
       button.addEventListener("click", onButtonClearClicked);
