@@ -45,14 +45,15 @@
   /** @param {MouseEvent} event */
   function onButtonEqualClicked(/* event */) {
     if (lastOperator == 0) return;
+    const currentNum = +output.innerText;
     if (lastOperator === 1) {
-      result = result + +output.innerText;
+      result = result + currentNum;
     } else if (lastOperator === 2) {
-      result = result - +output.innerText;
+      result = result - currentNum;
     } else if (lastOperator === 3) {
-      result = result * +output.innerText;
+      result = result * currentNum;
     } else if (lastOperator === 4) {
-      result = result / +output.innerText;
+      result = result / currentNum;
     }
     clearLcd();
     lastOperator = 0;
