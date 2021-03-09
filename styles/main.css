@@ -49,6 +49,8 @@ body {
 }
 
 .buttons button {
+  appearance: none;
+  border-width: thin;
   margin: 2px;
   min-height: 40px;
   font-size: 2em;
