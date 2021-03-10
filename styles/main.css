@@ -32,7 +32,7 @@ body {
   width: 100%;
 }
 
-.calc--lcd {
+.lcd {
   border-width: thin;
   border: 1px solid #cecece;
   font-size: 2em;
