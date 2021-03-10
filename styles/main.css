@@ -62,6 +62,12 @@ body {
   transform: scale(0.95);
 }
 
+#app,
+.lcd,
+.buttons button {
+  border-radius: 5px;
+}
+
 @media (min-width: 400px) {
   body {
     font-size: 16px;
