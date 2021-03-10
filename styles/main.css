@@ -56,6 +56,10 @@ body {
   font-size: 2em;
 }
 
+.buttons button:active {
+  transform: scale(0.95);
+}
+
 @media (min-width: 400px) {
   body {
     font-size: 16px;
