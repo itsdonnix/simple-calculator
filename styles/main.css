@@ -58,6 +58,10 @@ body {
   will-change: tranform;
 }
 
+:focus {
+  outline: none;
+}
+
 .buttons button:active {
   transform: scale(0.95);
 }
