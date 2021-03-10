@@ -9,6 +9,7 @@
   // DOM Elements
   const output = document.querySelector("#output");
   const buttonsWrapper = document.querySelector(".buttons");
+  const bellSound = document.getElementById("sound-bell");
 
   buttonsWrapper.querySelectorAll("button").forEach((button) => {
     if (!isNaN(button.innerText)) {
@@ -22,6 +23,9 @@
       // Operator buttons
       button.addEventListener("click", onOperatorButtonClicked);
     }
+
+    // Play sound when button is pressed
+    button.addEventListener("click", () => bellSound.play());
   });
 
   /** @param {MouseEvent} event */
