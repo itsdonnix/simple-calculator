@@ -51,9 +51,11 @@ body {
 .buttons button {
   appearance: none;
   border-width: thin;
+  font-size: 2em;
   margin: 2px;
   min-height: 40px;
-  font-size: 2em;
+  transition: transform 0.2s ease;
+  will-change: tranform;
 }
 
 .buttons button:active {
